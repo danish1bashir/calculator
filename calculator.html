@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+</head>
+<body>
+ <div class="outline">
+	<h1 id="cal">CALCULATOR</h1>
+
+   <div class="display">
+	<input type="text" id="container"><br>
+
+	<button onclick="fun(1)">1</button>
+	<button onclick="fun(2)">2</button>
+	<button onclick="fun(3)">3</button><br>
+
+    <button onclick="fun(4)">4</button>
+	<button onclick="fun(5)">5</button>
+	<button onclick="fun(6)">6</button><br>
+
+	<button onclick="fun(7)">7</button>
+	<button onclick="fun(8)">8</button>
+	<button onclick="fun(9)">9</button><br>
+
+	<button onclick="fun(0)">0</button>
+	<button onclick="fun('+')">+</button>
+	<button onclick="fun('-')">-</button><br>
+
+	<button onclick="fun('*')">*</button>
+	<button onclick="fun('/')">/</button>
+	<button onclick="fun('%')">%</button><br>
+
+	<button onclick="fun('.')">.</button>
+	<button onclick="showresult()">=</button>
+	<button onclick="clearit()">clear</button>
+    
+  </div>
+</div>
+
+
+</body>
+</html>
+
+<script>
+
+	function fun(x){
+
+     	document.getElementById("container").value += x;
+     }
+
+     function showresult(){
+
+     	let e=document.getElementById("container").value;
+     	r=eval(e);
+     	document.getElementById("container").value=r;
+     	
+
+     }
+
+     function clearit(){
+     	document.getElementById("container").value="";
+     }
+	
+
+</script>
+
+<style>
+
+	body
+	{
+		background-color: #548687;
+		text-align: center;
+		padding: 20px;
+	}
+	h1
+	{
+       background-color: #dfff00;
+       color:darkgreen;
+       padding: 10px:
+       margin-bottom :10px;
+       border-radius: 10px;
+       margin-right:500px ;
+       margin-left:500px ;
+
+	}
+	
+	.wrapper
+	{
+		
+		margin-left: 500px;
+		height:20px;
+		width:250px;
+		padding: 20px;
+	    background-color: whitesmoke;
+      
+     
+        width:300px;
+        margin-right:500px ;
+	}
+	button
+	{
+      width:90px;
+      height:60px;
+      margin: 5px;
+      font-size: 20px;
+      background-color: tomato;
+      padding: 20px;
+      border-radius: 8px;
+      cursor:pointer;
+      transition: background-color 0.2s;
+
+	}
+	#display
+	{
+      background-color: whitesmoke;
+      padding: 10px;
+      margin-bottom:20px;
+      width:200px;
+      height:50px;
+      font-size: 24px;
+      border:2px solid #333;
+      border-radius: 5px;
+      text-align: right;
+      margin-right:500px ; 
+
+	}
+	#container
+	{
+		width: 290px;
+		height:40px;
+		border-radius: 5px;
+	}
+	button:hover
+	{
+		background-color: #d44300; 
+	}
+
+	
+
+	
+
+	
+	
+
+
+
+
+
+
+</style>
